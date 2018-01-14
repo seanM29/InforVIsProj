@@ -1,0 +1,9 @@
+{
+  "name": "inforvis-project",
+  "version": "0.0.1",
+  "description": "inforvis project",
+  "dependencies": {
+    "express": "^4.15.2",
+    "socket.io": "^2.0.4"
+  }
+}
