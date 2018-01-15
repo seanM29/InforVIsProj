@@ -4,17 +4,25 @@ var io = require('socket.io')(http);
 var fs = require('fs');
 var express = require('express');
 app.use(express.static('./Data'))
-
+app.use(express.static('./lib'))
 
 var latlonJson = []
 app.get('/', function(req, res) {
-    res.sendFile(__dirname + '/demo.html');
+    res.sendFile(__dirname + '/heatmap.html');
 });
 
 app.get('/DataChart.html', function (req, res) {
    res.sendFile(__dirname + '/DataChart.html');
 });
-
+app.get('/DataType.html', function (req, res) {
+   res.sendFile(__dirname + '/DataType.html');
+});
+app.get('/DataType_test.html', function (req, res) {
+   res.sendFile(__dirname + '/DataType_test.html');
+});
+app.get('/PipCharts.html', function (req, res) {
+   res.sendFile(__dirname + '/PipCharts.html');
+});
 io.on('connection', function(socket) {
     console.log('a user connected');
 
